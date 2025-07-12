@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".CategoriaActivity"> <TextView
+    android:id="@+id/textView_category_title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Categorías"
+    android:textSize="28sp"
+    android:textStyle="bold"
+    android:textColor="@color/apple_green"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_marginTop="16dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_categories"
+        android:layout_width="391dp"
+        android:layout_height="421dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout_category_buttons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_category_title"
+        app:layout_constraintVertical_bias="0.066"
+        tools:listitem="@layout/item_category" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout_category_buttons"
+        android:layout_width="371dp"
+        android:layout_height="102dp"
+        android:layout_marginBottom="36dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="1dp">
+
+        <Button
+            android:id="@+id/button_add_category"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/apple_green"
+            android:text="Agregar"
+            android:textColor="@color/white"
+            app:cornerRadius="0dp" />
+
+        <Button
+            android:id="@+id/button_edit_category"
+            android:layout_width="wrap_content"
+            android:layout_height="102dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/apple_green"
+            android:text="Editar"
+            android:textColor="@color/white"
+            app:cornerRadius="0dp" />
+
+        <Button
+            android:id="@+id/button_delete_category"
+            android:layout_width="wrap_content"
+            android:layout_height="102dp"
+            android:backgroundTint="@color/apple_green"
+            android:text="Eliminar"
+            android:textColor="@color/white"
+            app:cornerRadius="0dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

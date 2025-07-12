@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".HistoryActivity">
+
+    <TextView
+        android:id="@+id/textView_history_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Historial de Transacciones"
+        android:textSize="25sp"         android:textStyle="bold"
+        android:textColor="@color/apple_green" app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout_filters"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_history_title">
+
+        <Spinner
+            android:id="@+id/spinner_month_filter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp" />
+
+        <Spinner
+            android:id="@+id/spinner_type_filter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"/> <Spinner
+        android:id="@+id/spinner_category_filter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_transactions"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_filters"
+        tools:listitem="@layout/item_transaction" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
