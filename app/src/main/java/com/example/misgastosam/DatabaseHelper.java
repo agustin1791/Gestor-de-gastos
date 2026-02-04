@@ -358,7 +358,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             queryBuilder.append("T.").append(COLUMN_TRANSACTION_AMOUNT).append(", ");
             queryBuilder.append("T.").append(COLUMN_TRANSACTION_DESCRIPTION).append(", ");
             queryBuilder.append("T.").append(COLUMN_TRANSACTION_DATE).append(", ");
-            queryBuilder.append("C.").append(COLUMN_CATEGORY_ID).append(", ");
+            queryBuilder.append("C.").append(COLUMN_CATEGORY_ID).append(" AS cat_id, ");
             queryBuilder.append("C.").append(COLUMN_CATEGORY_NAME).append(", ");
             queryBuilder.append("C.").append(COLUMN_CATEGORY_TYPE);
             queryBuilder.append(" FROM ").append(TABLE_TRANSACTIONS).append(" T");
