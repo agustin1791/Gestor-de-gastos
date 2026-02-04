@@ -141,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM", Locale.getDefault());
 
         // Obtener los últimos 5 meses
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 10; i++) {
             String monthYear = sdf.format(calendar.getTime());
             double balance = dbHelper.getBalanceForMonth(monthYear); // Llama al método en DatabaseHelper
             newBalances.add(new MonthlyBalance(monthYear, balance)); // Asume constructor MonthlyBalance(String, double)
